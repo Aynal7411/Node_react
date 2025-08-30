@@ -1,0 +1,8 @@
+[
+  { "name": "Aynal", "age": 28, "skills": ["Node.js", "React"] },
+  { "name": "Rahim", "age": 25, "skills": ["Python", "Django"] },
+  { "name": "Karim", "age": 30, "skills": ["Java", "Spring"] },
+{ "name": "Salma", "age": 22, "skills": ["JavaScript", "Vue.js"] }
+
+
+]

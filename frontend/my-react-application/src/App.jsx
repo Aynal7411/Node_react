@@ -13,6 +13,7 @@ import Login from "./pages/Login";
 import Dashboard from "./pages/Dashboard";
 import Homeland from "./pages/Ost";
 
+
 function App() {
   const [message, setMessage] = useState("Loading...");
   const [user, setUser] = useState(null);
@@ -44,6 +45,7 @@ function App() {
     <Navbar />
 
     <Routes>
+       
       <Route path="/" element={<Home />} />
       <Route path="/about" element={<About />} />
       <Route path="/projects" element={<Projects />} />
