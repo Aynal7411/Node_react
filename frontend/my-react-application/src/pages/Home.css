@@ -1,0 +1,36 @@
+.home-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh;
+  background: linear-gradient(135deg, #66a6ff, #89f7fe);
+  padding: 20px;
+  font-family: 'Arial', sans-serif;
+}
+
+.home-card {
+  background-color: rgba(255, 255, 255, 0.95);
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+  max-width: 700px;
+  text-align: center;
+}
+
+.home-card h1 {
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.home-card p {
+  color: #555;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.home-card .highlight {
+  font-weight: bold;
+  color: #66a6ff;
+  font-size: 18px;
+  margin-top: 15px;
+}

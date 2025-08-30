@@ -1,0 +1,41 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: hsl(106, 51%, 61%);
+  padding: 10px 15px;
+  border-radius: 30px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+ font-family: 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+}
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: hsl(240, 92%, 43%);
+  text-shadow: 3px 4px 5px hwb(0 7% 77% / 0.1);
+  letter-spacing: 4px;
+  font-family: 'Courier New', Courier, monospace;
+  margin-left: 20px;
+  cursor: pointer;
+ transition: 0.3s;
+ border: #e76317 solid 3px;
+ border-radius: 10px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 40px;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: #0f0e0e;
+  font-weight: 600;
+  transition: 0.2s;
+}
+
+.nav-links li a:hover {
+  color: #e76317;
+}

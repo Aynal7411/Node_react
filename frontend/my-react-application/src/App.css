@@ -1,0 +1,26 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 1rem;
+  text-align: center;
+  background-color: azure;
+}
+
+header {
+  background-color: #3dd310;
+  padding: 1rem;
+  color: #0e0d0d;
+  width: 100%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  border-radius: 10px;
+ 
+ 
+
+}
+h1 {
+  font-size: 2.5rem;
+  margin: 5px;
+  font-family: "Lucida Console", "Courier New", "monospace";
+  font-weight: bold;
+}
