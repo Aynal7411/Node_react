@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./Home.css";
 import Football from "../components/Football";
+import CountdownTimer from "../components/CountdownTimer";
 
 function Home() {
   const [message, setMessage] = useState("");
@@ -58,6 +59,10 @@ function Home() {
       <div className="football-section">
          <Football />
       </div>
+      <div style={{ textAlign: "center", marginTop: "50px" }}>
+      <h1>Countdown timers🏠</h1>
+      <CountdownTimer initialSeconds={15} /> {/* 15 second countdown */}
+    </div>
     </div>
   );
 }
