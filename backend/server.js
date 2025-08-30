@@ -5,13 +5,14 @@ const userRoutes = require("./routes/userRoutes");
 const os = require("os");
 const fs = require('fs');
 const util = require('util');
-
+const path = require("path");
+const dns = require('dns');
 const app = express();
 const PORT = 5000;
 
 app.use(cors({ origin: "http://localhost:5173" }));
 app.use(express.json());
-
+app.use("/assets", express.static(path.join(process.cwd(), "assets")));
 
 
 
@@ -116,6 +117,33 @@ app.post("/api/students", async (req, res) => {
   } catch (err) {
     res.status(500).json({ error: "Failed to add student" });
   }
+});
+
+app.post("/api/lookup", (req, res) => {
+  const { domain } = req.body;
+
+  if (!domain) {
+    return res.status(400).json({ error: "Domain is required" });
+  }
+
+  let result = {};
+
+  // Lookup IP (A record)
+  dns.resolve4(domain, (err, addresses) => {
+    result.ip = err ? "Not found" : addresses;
+
+    // Lookup MX records
+    dns.resolveMx(domain, (err, addresses) => {
+      result.mx = err ? "Not found" : addresses;
+
+      // Lookup CNAME
+      dns.resolveCname(domain, (err, addresses) => {
+        result.cname = err ? "Not found" : addresses;
+
+        res.json(result);
+      });
+    });
+  });
 });
 
 app.listen(PORT, () => console.log(`Server running on http://localhost:${PORT}`));

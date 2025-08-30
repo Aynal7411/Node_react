@@ -12,6 +12,7 @@ import Register from "./pages/Register";
 import Login from "./pages/Login";
 import Dashboard from "./pages/Dashboard";
 import Homeland from "./pages/Ost";
+import DnsLookup from "./components/DnsLookup";
 
 
 function App() {
@@ -59,7 +60,9 @@ function App() {
       <h1>{message}</h1>
     </div>
       <Homeland />
+        <DnsLookup />
     <Footer />
+       
   </>
 </Router>
   );
