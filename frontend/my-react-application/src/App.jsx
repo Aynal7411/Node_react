@@ -11,6 +11,7 @@ import Contact from "./pages/Contact";
 import Register from "./pages/Register";
 import Login from "./pages/Login";
 import Dashboard from "./pages/Dashboard";
+import Homeland from "./pages/Ost";
 
 function App() {
   const [message, setMessage] = useState("Loading...");
@@ -55,6 +56,7 @@ function App() {
     <div style={{ textAlign: "center", marginTop: "30px", color: "blue" }}>
       <h1>{message}</h1>
     </div>
+      <Homeland />
     <Footer />
   </>
 </Router>

@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./Home.css";
+import Football from "../components/Football";
 
 function Home() {
   const [message, setMessage] = useState("");
@@ -53,6 +54,9 @@ function Home() {
             {signal.message}
           </p>
         )}
+      </div>
+      <div className="football-section">
+         <Football />
       </div>
     </div>
   );
